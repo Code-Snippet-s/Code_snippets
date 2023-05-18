@@ -8,6 +8,17 @@ const authenticationController = require('../controllers/authenticationControlle
 require('dotenv').config();
 const secret = process.env.JWT_SECRET;
 
+
+// These next 3 routes are not fully operational yet. Out of time on iteration project
+router.get('/auth/error', (req, res) => res.send('Unknown Error'));
+router.get('/auth/github',passport.authenticate('github',{ scope: [ 'user:email' ] }),(req, res) => {
+  console.log('server js auth/github');
+});
+router.get('/auth/github/callback',passport.authenticate('github', { failureRedirect: '/http://localhost:8080/' }),(req, res) => {
+  console.log('Callback hit from auth');
+  res.redirect('/authentication/login');
+});
+
 router.post('/signup', authenticationController.signUp, (req, res) => {
   return res.status(201).json(res.locals.newUser);
 });
