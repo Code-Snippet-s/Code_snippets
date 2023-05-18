@@ -26,6 +26,7 @@
     "mongodb": "^5.5.0",
     "mongoose": "^7.1.1",
     "passport": "^0.6.0",
+    "passport-github2": "^0.1.12",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
     "react": "^18.2.0",
