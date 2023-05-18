@@ -3,11 +3,16 @@ import Sidebar from '../Sidebar/Sidebar.jsx';
 import styles from './MainContainer.module.scss';
 import Login from '../../components/userStart/Login.jsx';
 import Signup from '../../components/userStart/Signup.jsx';
-
+import validator from 'validator';
 const MainContainer = () => {
   const [login, setLogin] = useState(false);
   const [haveAccount, setHaveAccount] = useState(true);
+
+  const [strengthMessage, setStrengthMessage] = useState('');
+  
+  //MAY NEED TO REMOVE -- DUPLICATE WITH STRENGTHMESSAGE
   const [error, setError] = useState(false);
+
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,6 +20,13 @@ const MainContainer = () => {
     document.getElementById('username').value = '';
     const passwordInputValue = document.getElementById('password').value;
     document.getElementById('password').value = '';
+
+    if(usernameInputValue === '' ||  passwordInputValue === ''){
+      document.querySelector('.errorMessage').innerHTML = ' Username and password are required';
+      return false;
+    };
+
+   
 
     fetch('http://localhost:3000/authentication/login', {
       method: 'POST',
@@ -34,15 +46,34 @@ const MainContainer = () => {
         setLogin(result.username);
       })
       .catch((err) => {
-        setError(true);
+      
+      //MAY NEED TO REMOVE -- SEE IF TWO MESSAGES APPEAR
+       setError(true);
         console.log(err);
-      });
 
-    //Bypass login requirement:
-    //setLogin(true);
+
+        document.querySelector('.errorMessage').innerHTML = 'Please verify your user information and try again!';
+        return false;
+       
+      });
   };
   //functino to handle showing the signup page
   const handleHaveAccount = () => setHaveAccount(false);
+
+  //function to handle password strength check
+  const handleStrength = (input) => {
+    if(validator.isStrongPassword(input, {
+      minLength: 8,
+      minLowercase: 1,
+      minUppercase: 1,
+      minNumbers: 1,
+      minSymbols: 1
+    })){
+      setStrengthMessage('Strong Password');
+    } else {
+      setStrengthMessage('Not A Strong Password');
+    }
+  };
 
   //function to handle sign-up if username was not already taken
   const handleSigned = (e) => {
@@ -74,6 +105,7 @@ const MainContainer = () => {
   };
 
   return login ? (
+
     <div className={styles.container}>
       <div className={styles.div}>
         <button
@@ -97,10 +129,11 @@ const MainContainer = () => {
         style={`${error ? 'red' : ''}`}
         error={error}
       />
+
     </div>
   ) : (
     <div className={styles.container}>
-      <Signup handleSigned={handleSigned} />
+      <Signup handleSigned={ handleSigned } strengthMessage={ strengthMessage } handleStrength={ handleStrength }/>
     </div>
   );
 };

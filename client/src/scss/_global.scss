@@ -45,12 +45,19 @@ body {
   align-items: center;
 }
 
+.errorMessage {
+  margin-top: 240px;
+  position: fixed;
+  color: red;
+  font-size: 17px;
+}
 .form {
+
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-end;
+  align-items: flex-start;
   margin-top: 10px;
+  height: 200px;
 }
 
 #secondDiv {
@@ -77,11 +84,11 @@ body {
   background-color: rgb(18, 64, 84);
   opacity: 0.9;
   background: -webkit-linear-gradient(#eee, #333);
-  height: 260px;
+  height: 400px;
   color: black;
   font-size: 16px;
   font-weight: bold;
-  width: 500px;
+  width: 600px;
   border: 2px solid rgb(42, 41, 41);
   display: flex;
   justify-content: center;

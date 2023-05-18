@@ -31,5 +31,4 @@ authenticationController.signUp = async (req, res, next) => {
   }
 };
 
-
 module.exports = authenticationController;

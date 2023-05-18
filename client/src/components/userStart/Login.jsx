@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+
 import styles from './Login.module.scss';
 
 // eslint-disable-next-line react/prop-types
 const Login = ({ handleLogin, handleHaveAccount, style, error }) => {
+
   return (
     <div className='login'>
       <div id='loginBox'>
@@ -12,7 +14,9 @@ const Login = ({ handleLogin, handleHaveAccount, style, error }) => {
             <label htmlFor='username '>USERNAME:</label>&nbsp; &nbsp;
             <input
               id='username'
+
               className={`form-group ${styles[style]}`}
+
               type='text'
               placeholder='username...'
             />
@@ -21,7 +25,9 @@ const Login = ({ handleLogin, handleHaveAccount, style, error }) => {
             <label htmlFor='password'>PASSWORD:</label>&nbsp; &nbsp;
             <input
               id='password'
+
               className={`form-group ${styles[style]}`}
+
               type='password'
               placeholder='password...'
             />
@@ -30,17 +36,22 @@ const Login = ({ handleLogin, handleHaveAccount, style, error }) => {
             onClick={handleLogin}
             type='submit'
             className='btn btn-default'
+
             id='go'>
             GO
           </button>
         </form>
+         //<p className='errorMessage'></p>
         {error && <p className={styles.p}>wrong username or password!</p>}
+
       </div>
       <button
         id='bottomMessage'
         onClick={handleHaveAccount}
         type='submit'
+
         className='btn btn-default'>
+
         Click Me to Create Your Account!
       </button>
     </div>

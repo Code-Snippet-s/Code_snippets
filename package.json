@@ -36,7 +36,8 @@
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
     "react-tag-input": "^6.8.1",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "validator": "^13.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
