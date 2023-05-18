@@ -10,6 +10,7 @@ const secret = process.env.JWT_SECRET;
 
 // Passport JWT config
 const options = {};
+// extract JWT from cookie header
 options.jwtFromRequest = (req) => {
   let token = null;
   if (req && req.cookies) {
@@ -17,6 +18,7 @@ options.jwtFromRequest = (req) => {
   }
   return token;
 };
+// add our secret
 options.secretOrKey = secret;
 
 // new JWT strategy
