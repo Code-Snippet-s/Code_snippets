@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
+const path = require('path');
 
 const snippetsRouter = require('./routes/snippetsRouter');
 const authenticationRouter = require('./routes/authenticationRouter');
-
 
 require('dotenv').config();
 
@@ -25,12 +25,26 @@ app.use(passport.initialize());
 // parse incoming cookies and store them on req.cookies object
 app.use(cookieParser());
 // allow cookies to be included in CORS request
-app.use(cors({
-  origin: 'http://localhost:8080',
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: 'http://localhost:8080',
+    credentials: true
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+if (process.env.NODE_ENV === 'production') {
+  app.get('/', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../dist/index.html'));
+  });
+  app.use('/', express.static(path.join(__dirname, '../dist')));
+} else {
+  app.use('/', express.static(path.join(__dirname, '../client')));
+  app.get('/', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../client/index.html'));
+  });
+}
 
 app.use('/snippets', snippetsRouter);
 app.use('/authentication', authenticationRouter);
