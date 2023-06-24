@@ -1,6 +1,5 @@
 
  ![Screenshot 2023-06-23 at 8 36 12 PM](https://github.com/ECRI40-Velocirabbit/scratch_project_code_snippets/assets/112515781/914dc03c-5f51-47ec-99ca-74c59981409a)
-# Code Snippet
 
 # Built With
 ![JavaScript](https://img.shields.io/badge/-javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -15,6 +14,8 @@
 ![Supertest](https://img.shields.io/badge/-Supertest-C21325?style=for-the-badge&logo=Supertest&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-white?style=for-the-badge&logo=scss3&logoColor=pink)
+
+# Code Snippet
 
 
 Create a MongoDB database and a random string to be used as a JWTSECRET.
