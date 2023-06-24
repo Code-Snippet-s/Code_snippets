@@ -15,3 +15,11 @@
 ![Supertest](https://img.shields.io/badge/-Supertest-C21325?style=for-the-badge&logo=Supertest&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-white?style=for-the-badge&logo=scss3&logoColor=pink)
+
+
+Create a MongoDB database and a random string to be used as a JWTSECRET.
+
+Create a .env file and assign the following environment variables according to your MongoDB and secret.
+```
+MONGO_URI=‘’
+JWT_SECRET=‘(random string)’```
