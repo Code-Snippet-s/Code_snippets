@@ -39,3 +39,4 @@ You can add your snippet by clicking the 'Add New Snippet' button on the bottom 
 # Our Team
 
 
+<td align="center" width="18%"><a href="https://www.linkedin.com/in/jimmytran48"><img src="https://media.licdn.com/dms/image/D4E03AQHlf4UL9tpWTQ/profile-displayphoto-shrink_800_800/0/1671754294266?e=1692835200&v=beta&t=--eZmOayGzLYQnxXANliwMILLnQvwbkhSGicjc1Mr8U" width="250px" alt=""/><br /><sub><b>Jimmy Tran</b></sub></a><br /><a href="https://www.linkedin.com/in/jimmytran48/" title="LinkedIn"><img src="https://www.freeiconspng.com/uploads/linkedin-icon-19.png" width="20px"/></a> <a href="https://github.com/JimmyTran48" title="Github"><img src="https://cdn.icon-icons.com/icons2/2351/PNG/512/logo_github_icon_143196.png" width="20px"/></a></td>
