@@ -18,6 +18,7 @@
 # Code Snippet
 
 
+# Getting Started
 Create a MongoDB database and a random string to be used as a JWTSECRET.
 
 Create a .env file and assign the following environment variables according to your MongoDB and secret.
