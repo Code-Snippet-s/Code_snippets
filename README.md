@@ -19,9 +19,13 @@
 Code Snippet is a user-friendly solution for storing a collecion of code snippets from previous project in one place. Code Snippet utilizes tags to organize each snippet based on language and utility.
 
 # Getting Started
-Create a MongoDB database and a random string to be used as a JWTSECRET.
+1. Create a MongoDB database and a random string to be used as a JWTSECRET.
 
 Create a .env file and assign the following environment variables according to your MongoDB and secret.
 ```
 MONGO_URI=‘’
-JWT_SECRET=‘(random string)’```
+JWT_SECRET=‘(random string)’
+```
+
+2. Install dependencies by running `npm i`
+3. Get it started and run `npm run dev`
