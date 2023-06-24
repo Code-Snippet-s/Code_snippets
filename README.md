@@ -29,3 +29,13 @@ JWT_SECRET=‘(random string)’
 
 2. Install dependencies by running `npm i`
 3. Get it started and run `npm run dev`
+
+# Usage Guideline
+
+You can add your snippet by clicking the 'Add New Snippet' button on the bottom left. You have an option to add a tag as well. All the snippets saved can be viewed on the sideBar.
+
+![snippet](https://github.com/ECRI40-Velocirabbit/scratch_project_code_snippets/assets/112515781/9435d0d9-190a-41de-9c19-e3dd60328719)
+
+# Our Team
+
+
