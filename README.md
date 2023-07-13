@@ -16,7 +16,7 @@
 ![SCSS](https://img.shields.io/badge/SCSS-white?style=for-the-badge&logo=scss3&logoColor=pink)
 
 # Code Snippet
-Code Snippet is a user-friendly solution for storing a collecion of code snippets from previous project in one place. Code Snippet utilizes tags to organize each snippet based on language and utility.
+Code Snippet is a user-friendly solution for storing a colletion of code snippets from previous project in one place. Code Snippet utilizes tags to organize each snippet based on language and utility.
 
 # Getting Started
 1. Create a MongoDB database and a random string to be used as a JWTSECRET.
